@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title> Slidemenu | navbar</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav>
+
+            <label class="logo">Stbugyei<span class="smile">&#9787;</span> </label>
+
+            <input type="checkbox" id="check">
+            <input type="radio" name="show" id="activate-home" checked>
+            <input type="radio" name="show" id="activate-skills">
+            <input type="radio" name="show" id="activate-github">
+
+            <label for="check">
+                <div class="toggler-bar"><i class="fas fa-bars"></i> <span class="items">Menu</span></div>
+            </label>
+
+
+            <ul class="menu-wrapper">
+                <div class="sub-menu__wrapper">
+                    <li>
+                        <a href="#" class="desktop-view desktop-view__hover"><i class="fas fa-home"></i>
+                            <span class="items">Home</span> 
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="desktop-view desktop-view__hover"><i class="fab fa-servicestack"></i>
+                            <span class="items">Tech Skills</span>
+                            <span class="caret"><i class="fas fa-caret-down"></i>
+                            </span></a>
+
+                        <!-- skills-menu -->
+
+                        <ul class="sub-menu__skills">
+                            <label for="activate-home">
+                                <li class="mobile-view" style="margin-left: 25px;"><i class="fas fa-arrow-left"></i>
+                                    <span class="items">Back</span>
+                                </li>
+                            </label>
+
+                            <li class="mobile-view"> <a href="#"></i><span class="items">Tech Skills overview</span></a></li>
+
+                            <li> <a href="#"><i class="fab fa-html5"></i><span class="items">HTML5</span></a></li>
+
+                            <li> <a href="#"><i class="fab fa-css3-alt"></i><span class="items">CSS3</span></a></li>
+
+                            <li> <a href="#"><i class="fab fa-js"></i><span class="items">JavaScript</span></a></li>
+
+                            <li> <a href="#"><i class="fab fa-react"></i><span class="items">React.js</span> </a></li>
+
+                            <li> <a href="#"><i class="fab fa-node-js"></i><span class="items">Node.js</span> </a></li>
+                        </ul>
+                    </li>
+
+                    <li> <a href="#" class="desktop-view desktop-view__hover"><i class="far fa-address-card"></i>
+                        <span class="items">About</span></a>
+                </li>
+
+                    <li>
+                        <a href="#" class="desktop-view desktop-view__hover"><i class="fab fa-github"></i>
+                            <span class="items">GitHub Repos</span>
+                            <span class="caret"><i class="fas fa-caret-down"></i>
+                            </span></a>
+
+                        <!-- github-menu -->
+
+                        <ul class="sub-menu__github">
+                            <label for="activate-home">
+                                <li class="mobile-view" style="margin-left: 25px;"><i class="fas fa-arrow-left"></i>
+                                    <span class="items">Back</span>
+                                </li>
+                            </label>
+
+                            <li class="mobile-view"> <a href="https://github.com/stbugyei?tab=repositories"></i><span class="items">github Repos overview</span></a></li>
+
+                            <li> <a href="https://fullwidth-nav.netlify.app/"><i class="fas fa-route"></i><span
+                                        class="items">fullwidth-nav</span></a></li>
+
+                            <li> <a href="https://horizontal-accordion.netlify.app/"><i
+                                        class="far fa-caret-square-down"></i><span
+                                        class="items">accordion</span></a></li>
+
+                            <li> <a href="https://animated-card.netlify.app/"><i class="far fa-address-card"></i><span
+                                        class="items">animated-bcard</span></a></li>
+
+                            <li> <a href="https://countryandweather.netlify.app/"><i
+                                        class="fas fa-cloud-sun-rain"></i><span class="items">Weather</span> </a>
+                            </li>
+
+                            <li> <a href="https://postblog.netlify.app/"><i class="fas fa-blog"></i><span
+                                        class="items">blog-post</span> </a></li>
+                        </ul>
+                    </li>
+
+                    <li> <a href="#" class="desktop-view desktop-view__hover"><i class="fas fa-blog"></i>
+                            <span class="items">Blog</span></a>
+                    </li>
+
+                    <!-- default home buttons -->
+
+                    <ul class="sub-menu__home">
+                        <li> <a href="#"><i class="fas fa-home"></i>
+                                    <span class="items">Home</span> </a>
+                        </li>
+
+                        <label for="activate-skills">
+                            <li> <i class="fab fa-servicestack"></i>
+                                <span class="items">Tech Skills</span>
+                                <span class="direction-right"> <i class="fas fa-chevron-right"></i>
+                                </span>
+                            </li>
+                        </label>
+
+                        <li> <a href="#"><i class="far fa-address-card"></i>
+                                <span class="items">About</span></a>
+                        </li>
+
+                        <label for="activate-github">
+                            <li>
+                                <i class="fab fa-github"></i>
+                                <span class="items">GitHub Repos</span>
+                                <span class="direction-right"> <i class="fas fa-chevron-right"></i>
+                                </span>
+                            </li>
+                        </label>
+
+                        <li> <a href="#"><i class="fas fa-blog"></i>
+                                <span class="items">Blog</span></a>
+                        </li>
+
+                        <!-- Social media -->
+
+                            <div class="subscribe-wrapper">
+            
+                                <div class='subscribe__container'>
+                                    <form method="GET">
+                                        <input id="search-field" class="input-field" type="search" name="keyword"
+                                            placeholder="Subscribe Here" autocomplete="off">
+                                        <button class="btn-subscribe" type="submit">
+                                            <i class="far fa-envelope"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+
+                         <!-- Social media -->
+                            
+                            <div class="social-media__content">
+                            <div class="linkedin"><a href='#'>
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                            <div class="github"> <a href='#'>
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <div class="facebook"> <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                            <div class="twitter"> <a href='#'>
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                            <div class="instagram"> <a href='#'>
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </ul>
+        </nav>
+        <!-- <div class="cover__page"></div> -->
+    </div>
+</body>
+
+</html>
+
+<!-- <ul> -->
+<!-- <div class="sub-menu__wrapper">
+                        <ul class="sub-menu__home">
+                            <li> <a href="#"><i class="fas fa-home"><span class="items">Home</span> </i></a>
+                            </li>
+    
+                            <label for="activate-skills">
+                                <li> <i class="fab fa-servicestack"></i>
+                                    <span class="items">Tech Skills</span>
+                                    <span class="direction-right"> <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </li>
+                            </label>
+    
+                            <li> <a href="#"><i class="far fa-address-card"></i>
+                                    <span class="items">About</span></a>
+                            </li>
+    
+                            <label for="activate-github">
+                                <li>
+                                    <i class="fab fa-github"></i>
+                                    <span class="items">GitHub Repos</span>
+                                    <span class="direction-right"> <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </li>
+                            </label>
+    
+                            <li> <a href="#"><i class="fas fa-blog"></i>
+                                    <span class="items">Blog</span></a>
+                            </li>
+                        </ul>
+     -->
+<!-- skills-menu -->
+
+<!-- <ul class="sub-menu__skills">
+                            <label for="activate-home">
+                                <li><i class="fas fa-arrow-left"></i>
+                                    <span class="items">Tech Skills</span>
+                                </li>
+                            </label>
+    
+                            <li> <a href="#"><i class="fab fa-html5"></i><span class="items">HTML5</span></a></li>
+    
+                            <li> <a href="#"><i class="fab fa-css3-alt"></i><span class="items">CSS3</span></a></li>
+    
+                            <li> <a href="#"><i class="fab fa-js"></i><span class="items">JavaScript</span></a></li>
+    
+                            <li> <a href="#"><i class="fab fa-react"></i><span class="items">React.js</span> </a></li>
+    
+                            <li> <a href="#"><i class="fab fa-node-js"></i><span class="items">Node.js</span> </a></li>
+                        </ul> -->
+
+<!-- github-menu -->
+
+<!-- <ul class="sub-menu__github">
+                            <label for="activate-home">
+                                <li><i class="fas fa-arrow-left"></i>
+                                    <span class="items">github Repos</span>
+                                </li>
+                            </label>
+    
+                            <li> <a href="https://fullwidth-nav.netlify.app/"><i class="fas fa-route"></i><span
+                                        class="items">fullwidth-nav</span></a></li>
+    
+                            <li> <a href="https://horizontal-accordion.netlify.app/"><i
+                                        class="far fa-caret-square-down"></i><span
+                                        class="items">horizontal-accordion</span></a></li>
+    
+                            <li> <a href="https://animated-card.netlify.app/"><i class="far fa-address-card"></i><span
+                                        class="items">animated-bcard</span></a></li>
+    
+                            <li> <a href="https://countryandweather.netlify.app/"><i class="fas fa-cloud-sun-rain"></i><span
+                                        class="items">Weather</span> </a></li>
+    
+                            <li> <a href="https://postblog.netlify.app/"><i class="fas fa-blog"></i><span
+                                        class="items">blog-post</span> </a></li>
+                        </ul>
+                    </div> -->
+<!-- </ul> -->
