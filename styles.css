@@ -546,8 +546,7 @@ nav ul.menu-wrapper{
  
 /*===============================*/
 
-nav ul ul,
-nav ul ul ul{ 
+nav ul ul{ 
   top: initial;  
   visibility: hidden; 
   opacity: initial;
@@ -760,14 +759,13 @@ nav ul ul ul{
  visibility: visible;
  } 
 
-  /* nav ul li:hover > ul{
+   nav ul li:hover > ul{
     visibility: initial;
     opacity: initial;
     transform: initial;
     animation: initial;
     display: initial;
-  
-} */
+} 
   
 } 
 
