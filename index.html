@@ -20,9 +20,10 @@
             <input type="radio" name="show" id="activate-home" checked>
             <input type="radio" name="show" id="activate-skills">
             <input type="radio" name="show" id="activate-github">
+            <input type="radio" name="show" id="activate-navbars">
 
             <label for="check">
-                <div class="toggler-bar"><i class="fas fa-bars"></i> <span class="items">Menu</span></div>
+                <div class="toggler-bar"><i class="fas fa-bars"></i> <span class="items menu-text">Menu</span></div>
             </label>
 
 
@@ -30,7 +31,7 @@
                 <div class="sub-menu__wrapper">
                     <li>
                         <a href="#" class="desktop-view desktop-view__hover"><i class="fas fa-home"></i>
-                            <span class="items">Home</span> 
+                            <span class="items">Home</span>
                         </a>
                     </li>
 
@@ -44,12 +45,14 @@
 
                         <ul class="sub-menu__skills">
                             <label for="activate-home">
-                                <li class="mobile-view" style="margin-left: 25px;"><i class="fas fa-arrow-left"></i>
+                                <li class="mobile-view"><i class="fas fa-arrow-left"></i>
                                     <span class="items">Back</span>
                                 </li>
                             </label>
 
-                            <li class="mobile-view"> <a href="#"></i><span class="items">Tech Skills overview</span></a></li>
+                            <li class="mobile-view"> <a href="#"></i><span class="items">Tech Skills
+                                        overview</span></a>
+                            </li>
 
                             <li> <a href="#"><i class="fab fa-html5"></i><span class="items">HTML5</span></a></li>
 
@@ -57,15 +60,17 @@
 
                             <li> <a href="#"><i class="fab fa-js"></i><span class="items">JavaScript</span></a></li>
 
-                            <li> <a href="#"><i class="fab fa-react"></i><span class="items">React.js</span> </a></li>
+                            <li> <a href="#"><i class="fab fa-react"></i><span class="items">React.js</span> </a>
+                            </li>
 
-                            <li> <a href="#"><i class="fab fa-node-js"></i><span class="items">Node.js</span> </a></li>
+                            <li> <a href="#"><i class="fab fa-node-js"></i><span class="items">Node.js</span> </a>
+                            </li>
                         </ul>
                     </li>
 
                     <li> <a href="#" class="desktop-view desktop-view__hover"><i class="far fa-address-card"></i>
-                        <span class="items">About</span></a>
-                </li>
+                            <span class="items">About</span></a>
+                    </li>
 
                     <li>
                         <a href="#" class="desktop-view desktop-view__hover"><i class="fab fa-github"></i>
@@ -77,29 +82,77 @@
 
                         <ul class="sub-menu__github">
                             <label for="activate-home">
-                                <li class="mobile-view" style="margin-left: 25px;"><i class="fas fa-arrow-left"></i>
+                                <li class="mobile-view"><i class="fas fa-arrow-left"></i>
                                     <span class="items">Back</span>
                                 </li>
                             </label>
 
-                            <li class="mobile-view"> <a href="https://github.com/stbugyei?tab=repositories"></i><span class="items">github Repos overview</span></a></li>
-
-                            <li> <a href="https://fullwidth-nav.netlify.app/"><i class="fas fa-route"></i><span
-                                        class="items">fullwidth-nav</span></a></li>
+                            <li class="mobile-view"> <a href="https://github.com/stbugyei?tab=repositories"></i><span
+                                        class="items">github Repos overview</span></a>
+                            </li>
 
                             <li> <a href="https://horizontal-accordion.netlify.app/"><i
-                                        class="far fa-caret-square-down"></i><span
-                                        class="items">accordion</span></a></li>
+                                        class="far fa-caret-square-down"></i><span class="items">accordion</span></a>
+                            </li>
 
                             <li> <a href="https://animated-card.netlify.app/"><i class="far fa-address-card"></i><span
-                                        class="items">animated-bcard</span></a></li>
+                                        class="items">animated-bcard</span></a>
+                            </li>
 
                             <li> <a href="https://countryandweather.netlify.app/"><i
                                         class="fas fa-cloud-sun-rain"></i><span class="items">Weather</span> </a>
                             </li>
 
                             <li> <a href="https://postblog.netlify.app/"><i class="fas fa-blog"></i><span
-                                        class="items">blog-post</span> </a></li>
+                                        class="items">blog-post</span> </a>
+                            </li>
+
+                            <label for="activate-navbars">
+                                <li class="mobile-view">
+                                    <a href="#"><i class="fas fa-route"></i><span class="items">navbars</span>
+                                        <span class="direction-right"> <i class="fas fa-chevron-right"></i>
+                                        </span></a>
+                                </li>
+                            </label>
+
+                            <li>
+                                <a href="#" class="desktop-view"><i class="fas fa-route"></i><span
+                                        class="items">navbars</span>
+                                    <span class="direction-right"> <i class="fas fa-chevron-right"></i>
+                                    </span></a>
+
+                                <!-- navbars sub menu -->
+
+                                <ul class="sub-menu__navbars">
+
+                                    <label for="activate-github">
+                                        <li class="mobile-view"><i class="fas fa-arrow-left"></i>
+                                            <span class="items">Back</span>
+                                        </li>
+                                    </label>
+
+                                    <li class="mobile-view"> <a href="#"></i><span class="items">Navbars
+                                                overview</span></a>
+                                    </li>
+
+
+                                    <li> <a href="https://fullwidth-nav.netlify.app/"><i
+                                                class="fab fa-elementor"></i><span
+                                                class="items">fullwidth-nav</span></a>
+                                    </li>
+
+                                    <li> <a href="https://multipledrop-navbar.netlify.app/"><i
+                                                class="fas fa-align-left"></i><span class="items">dropdown-nav</span>
+                                        </a>
+                                    </li>
+
+                                    <li> <a href="https://awesome-poincare-4c3982.netlify.app/"><i class="fas fa-align-justify"></i><span class="items">block-nav</span> </a>
+                                    </li>
+                                </ul>
+
+                            </li>
+
+
                         </ul>
                     </li>
 
@@ -111,7 +164,7 @@
 
                     <ul class="sub-menu__home">
                         <li> <a href="#"><i class="fas fa-home"></i>
-                                    <span class="items">Home</span> </a>
+                                <span class="items">Home</span> </a>
                         </li>
 
                         <label for="activate-skills">
@@ -139,23 +192,23 @@
                                 <span class="items">Blog</span></a>
                         </li>
 
+                        <!-- Subscribe -->
+
+                        <div class="subscribe-wrapper">
+
+                            <div class='subscribe__container'>
+                                <form method="GET">
+                                    <input id="search-field" class="input-field" type="search" name="keyword"
+                                        placeholder="Subscribe Here" autocomplete="off">
+                                    <button class="btn-subscribe" type="submit">
+                                        <i class="far fa-envelope"></i></button>
+                                </form>
+                            </div>
+                        </div>
+
                         <!-- Social media -->
 
-                            <div class="subscribe-wrapper">
-            
-                                <div class='subscribe__container'>
-                                    <form method="GET">
-                                        <input id="search-field" class="input-field" type="search" name="keyword"
-                                            placeholder="Subscribe Here" autocomplete="off">
-                                        <button class="btn-subscribe" type="submit">
-                                            <i class="far fa-envelope"></i></button>
-                                    </form>
-                                </div>
-                            </div>
-
-                         <!-- Social media -->
-                            
-                            <div class="social-media__content">
+                        <div class="social-media__content">
                             <div class="linkedin"><a href='#'>
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>

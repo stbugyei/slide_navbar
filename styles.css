@@ -37,6 +37,7 @@
 
   nav{
     position: relative; 
+    display: block;
     font-size: 1.3rem;
     text-transform: uppercase;
     width: 70%;
@@ -46,6 +47,8 @@
     border-radius: 50px;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.09);
     background: #fff;
+    display: flex;
+    justify-content: space-between;
   }
 
   nav:after{
@@ -56,7 +59,7 @@
 
 
 nav > label.logo{
-  position: absolute;
+  /* position: absolute; */
   font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -73,10 +76,7 @@ nav > label.logo{
 }
 
 
- nav ul{
-  position: relative; 
-  float: right;
-  margin-right: 10px;
+ nav ul.menu-wrapper{
   transition: all .4s ease-in-out;
 }
 
@@ -92,7 +92,8 @@ nav ul li{
 span.items{
   color:#003087;
   margin-left: 10px;
-  font-weight: 600; 
+  font-weight: 600;
+  cursor: pointer; 
 }
 
 
@@ -149,21 +150,33 @@ i.fa-chevron-right {
 nav ul ul{
   position: absolute;
   text-align: left;
-  background: #fff;
-  display: block;
+  background: #fff; 
+  padding: 5px;
+  display: block; 
   visibility: hidden; 
   top: 65px;
   opacity: 0;
   z-index: 999;
-  box-shadow: 0px 10px 20px rgba(0,0,0,0.09);
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.09); 
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  border-bottom: 2px solid rgba(0,0,0,0.3);
+  border-bottom: 2px solid rgba(0,0,0,0.3); 
   transform: scaleY(0);
-  transform-origin: top;
-  /* transform: translate3d(0px, -12px, 0px); */
+  transform-origin: top; 
+  /* transform: translate3d(0px, -12px, 0px);  */
   transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
+
+/*sub-menu__navbars / ul ul ul*/
+
+nav ul ul ul{
+  position: absolute;
+  top: -4px;
+  left: -226px;  
+  clear: both;
+  /* transform: translate3d(0px, -12px, 0px); */
+} 
 
 nav ul ul li{
   width: 210px;
@@ -173,27 +186,38 @@ nav ul ul li{
   margin: 0px;
 } 
 
+span.direction-right i{
+  float: right;
+  margin-top: 20px; 
+  display: block;
+ }
+
+
 nav ul ul li a{
  font-size: 15px;
 } 
 
 
-nav ul li:hover > ul{
+nav ul li:hover > ul,
+nav ul li:focus-within > ul{
   visibility: visible;
   opacity: 1;
   transform: scaleY(1);
-  animation: fade 1s;
-} 
+  animation: fade 1.5s;
+}   
+
+
 
 /*Swapping the caret on hover*/
 span.caret{
   margin-left: 5px;
 }
 
+
 a.desktop-view:hover > span.caret i{
   transform: rotate(180deg);
   color: rgb(255, 208, 0);
-transition: all .3s;
+  transition: all .3s;
 } 
 
 
@@ -497,30 +521,53 @@ nav ul.menu-wrapper{
  }
 
 
-nav ul.menu-wrapper::before{
+ nav ul.menu-wrapper::after{
+  content: "";
+  position: absolute;
+  right: 30px;
+  top: -19px;
+  border: 10px solid;
+  border-color:  transparent transparent #fff transparent;  
+  z-index: 9999;
+ }
+
+ 
+ nav ul.menu-wrapper::before{
   content: "";
   position: absolute;
   right: 26px;
   top: -26px;
-  /* border-width: 15px;
-  border-style: solid; */
-  border: 15px solid #fff; 
-   border-color:  transparent transparent #003087 transparent;  
+  border-width: 14px;
+  border-style: solid; 
+  border-color:  transparent transparent#003087 transparent;  
  }
+  
 
  
 /*===============================*/
+
+nav ul ul,
+nav ul ul ul{ 
+  top: initial;  
+  visibility: hidden; 
+  opacity: initial;
+  border-bottom-left-radius: initial;
+  border-bottom-right-radius: initial;
+  border-bottom:initial;
+  box-shadow: initial;
+  transform: initial !important;
+  transition: all .45s cubic-bezier(0.29, 0.63, 0.44, 1); 
+} 
  
 nav ul.menu-wrapper{
    position: absolute;
    left: 15px;
-   float: none; 
    width: 96%;    
-   height: 415px; 
+   height: 415px;  
    top: 75px;  
    background: #003087;     
-   border: 1px solid #003087; 
-   z-index: 999999; 
+   border: 2px solid #003087; 
+   z-index: 99;  
    opacity: 0;
    transform: translateY(100%);
    transition: all .3s cubic-bezier(0.29, 0.63, 0.44, 1); 
@@ -532,28 +579,20 @@ nav ul.menu-wrapper{
  }
 
 
-nav ul ul{
-  position: initial;
-  opacity: initial;
-  visibility: initial;  
-  top: initial;  
-  border-bottom-left-radius: initial;
-  border-bottom-right-radius: initial;
-  border-bottom:initial;
-  box-shadow: initial;
-  transition: all .45s cubic-bezier(0.29, 0.63, 0.44, 1); 
-  visibility: initial; 
-}
-
-
+nav ul li,
 nav ul ul li{
-  width: initial;
+  display: block;
+  width: 100% !important;
   float: none;
   display: list-item;
-  position: relative;
+  position: initial;
   margin: 0px;
   border-bottom: initial;
   border-right: initial; 
+} 
+
+ nav ul ul ul{
+  position: static;
 } 
 
 
@@ -586,39 +625,77 @@ nav ul ul li{
   }
 
 
+  
+
 /* all children ul properties*/
   .sub-menu__home,
   .sub-menu__skills, 
   .sub-menu__github{
-  position: absolute;  
+  position: absolute; 
+  display: block;
   width: 100%; 
   height: 100%;
   display: block;
-  transform: translateY(0);
-  margin: 0 !important; 
   padding: 10px;
   /* background: #fff;*/
   visibility: hidden;  
-  opacity: 0;
+  opacity: 0;  
   border: inherit !important;
+}
+
+/* 
+nav ul ul ul{
+  visibility: initial !important;
+  opacity: initial !important;
+} */
+
+
+
+/* .sub-menu__navbars{
+  position: absolute;   
+  width: 100%; 
+  transform: translateY(0);
+  padding: 10px;
+  left: 0;
+  bottom: 0;
+  right: 110%;
+  visibility: hidden;  
+  opacity: 0;    
+  background: red;
+} */
+
+
+.sub-menu__navbars{
+  position: absolute;  
+  display: block; 
+  width: 100%; 
+  height: 100%;
+  padding: 10px;
+  top: 0;
+  bottom: 0;
+  left: -220%; 
+  transform: scaleY(1);
+  visibility: hidden;  
+  opacity: 0; 
 }
 
 
 .sub-menu__home li,
 .sub-menu__skills li, 
-.sub-menu__github li{
+.sub-menu__github li,
+.sub-menu__navbars li{
   display: block;
   line-height: 55px;
 }
 
   .sub-menu__home{
     left: -100%;   
-    /* transform: translateX(200px);  */
+    /* transform: translateX(200px);*/
 }
 
   .sub-menu__skills, 
   .sub-menu__github{
-   right: -100%;
+   right: -110%;
 }
 
 
@@ -643,7 +720,7 @@ nav ul ul li{
  
  #activate-skills:checked ~ ul .sub-menu__wrapper li .sub-menu__skills{
   visibility: visible;
-   right: 0; 
+  right: 0; 
   opacity: 1;
   animation: fade 1s;
  }
@@ -655,6 +732,14 @@ nav ul ul li{
   opacity: 1;
   animation: fade 1s;
  }
+
+ 
+ #activate-navbars:checked ~ ul.menu-wrapper .sub-menu__wrapper li ul.sub-menu__github li ul.sub-menu__navbars{
+  visibility: visible;
+  opacity: 1;
+  left: -110%;  
+ }
+
 
   nav ul li {
     display: block;
@@ -675,6 +760,15 @@ nav ul ul li{
  visibility: visible;
  } 
 
+  /* nav ul li:hover > ul{
+    visibility: initial;
+    opacity: initial;
+    transform: initial;
+    animation: initial;
+    display: initial;
+  
+} */
+  
 } 
 
 @media (min-width: 320px) and (max-width: 480px) {
